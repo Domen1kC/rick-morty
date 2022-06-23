@@ -26,13 +26,13 @@ function App() {
           method: "GET",
           credentials: "include",
           headers: {
-            Accept: 
+            Accept:
             "application/json",
             "Content-Type": "application/json",
             "Access-Control-Allow-Credentials"
             : true,
             "Access-Control-Allow-Origin" : true,
-            
+
           },
         })
           .then((response) => {
@@ -50,15 +50,15 @@ function App() {
     }, []);
 
 
-    
 
 
-  return ( 
-    
+
+  return (
+
     <Router>
       <div className="App">
         <Navbar user={user} />
-      
+
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<CardDetails />} />
@@ -118,14 +118,14 @@ const Home = () => {
         info={info}
         pageNumber={pageNumber}
         updatePageNumber={updatePageNumber}
-        
+
       />
-      
+
     </div>
-    
+
   );
 };
 ;
- 
+
 
 export default App;
