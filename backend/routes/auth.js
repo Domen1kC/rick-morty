@@ -10,6 +10,7 @@ router.get('/google', passport.authenticate("google", {    scope: [
     'email'
 ]}));
 
+router.get("/facebook", passport.authenticate("facebook", { scope: ["public_profile", 'email'] }));
 
 
 router.get("/login/success", (req,res) => {
@@ -33,7 +34,7 @@ router.get("/login/failed", (req,res) => {
     })
 });
 
-router.get("/facebook", passport.authenticate("facebook", { scope: ["profile", 'email'] }));
+
 
 router.get(
   "/facebook/callback",

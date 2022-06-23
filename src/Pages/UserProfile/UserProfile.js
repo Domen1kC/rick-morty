@@ -34,7 +34,7 @@ const UserProfile = ({user}) => {
               
               <img src={user.photos[0].value}
                 alt="Avatar" class="img-fluid my-5 avatar-img"  />
-              <h5 className="user-text">{user.displayName}</h5>
+              <h5 className="user-text">{user.name.familyName}</h5>
               <i class="far fa-edit mb-5"></i>
             </div>
             <div class="col-md-8">
@@ -48,7 +48,7 @@ const UserProfile = ({user}) => {
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <p class="text-muted">{user.displayName}</p>
+                    <p class="text-muted">{user.name.familyName}</p>
                   </div>
                 </div>
                 <h6>Episodes Watched</h6>

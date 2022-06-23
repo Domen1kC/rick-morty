@@ -5,7 +5,7 @@ import "../../App.scss";
 
 const Navbar = ({ user }) => {
   const logout = () => {
-    window.open("http://localhost:3000/auth/logout", "_self");
+    window.open("http://localhost:5000/auth/logout", "_self");
   };
 
   return (
@@ -65,7 +65,7 @@ const Navbar = ({ user }) => {
               className="avatar"
             />
           </li>
-          <li className="listItem">{user.displayName}</li>
+          <li className="listItem">{user.name.familyName}</li>
           <NavLink
               activeClassName="active"
               className="nav-link"
