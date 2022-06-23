@@ -3,7 +3,7 @@ import Facebook from "../img/facebook.png";
 
 const Login = () => {
   const google = () => {
-    window.open("https://react-rick-app.herokuapp.com:5000/auth/google", "_self");
+    window.open("http://localhost:5000/auth/google", "_self");
   };
 
   const facebook = () => {
