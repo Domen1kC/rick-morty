@@ -22,7 +22,7 @@ function App() {
   const [user, setUser] = useState(null);
     useEffect(() => {
       const getUser = () => {
-        fetch("https://react-rick-app.herokuapp.com:5000/auth/login/success", {
+        fetch("https://react-rick-app.herokuapp.com/auth/login/success", {
           method: "GET",
           credentials: "include",
           headers: {

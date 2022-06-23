@@ -5,7 +5,7 @@ import "../../App.scss";
 
 const Navbar = ({ user }) => {
   const logout = () => {
-    window.open("http://localhost:5000/auth/logout", "_self");
+    window.open("https://react-rick-app.herokuapp.com/auth/logout", "_self");
   };
 
   return (
