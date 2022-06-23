@@ -5,7 +5,7 @@ const CLIENT_URL = "http://localhost:3000/"
 
 
 router.get('/google', passport.authenticate("google", {    scope: [
-    'https://www.googleapis.com/auth/userinfo.profile',
+    'profile',
     'https://www.googleapis.com/auth/userinfo.email'
 ]}));
 
