@@ -3,11 +3,11 @@ import Facebook from "../img/facebook.png";
 
 const Login = () => {
   const google = () => {
-    window.open("https://react-rick-app.herokuapp.com/auth/google", "_self");
+    window.open("http://localhost:3000/auth/google", "_self");
   };
 
   const facebook = () => {
-    window.open("https://react-rick-app.herokuapp.com/auth/facebook", "_self");
+    window.open("http://localhost:3000/auth/facebook", "_self");
   };
 
 return (
