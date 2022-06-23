@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const passport = require('passport');
 
-const CLIENT_URL = "http://localhost:3000/"
+const CLIENT_URL = "https://react-rick-app.herokuapp.com"
+
 
 
 router.get('/google', passport.authenticate("google", {    scope: [
@@ -31,6 +32,16 @@ router.get("/login/failed", (req,res) => {
         message: 'failure',
     })
 });
+
+router.get("/facebook", passport.authenticate("facebook", { scope: ["profile", 'email'] }));
+
+router.get(
+  "/facebook/callback",
+  passport.authenticate("facebook", {
+    successRedirect: CLIENT_URL,
+    failureRedirect: "/login/failed",
+  })
+);
 
 router.get('/google/callback', passport.authenticate('google', {
     successRedirect: CLIENT_URL,
